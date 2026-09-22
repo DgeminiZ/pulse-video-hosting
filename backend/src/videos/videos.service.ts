@@ -38,6 +38,14 @@ export class VideosService {
     return video;
   }
 
+  exists(id: string): boolean {
+    const video = this.videos.some((item) => item.id === id);
+    if (!video) {
+      throw new NotFoundException(`Video with id "${id}" not found`);
+    }
+    return true;
+  }
+
   update(id: string, dto: UpdateVideoDto): Video {
     const video = this.videos.find((item) => item.id === id);
     if (!video) {
