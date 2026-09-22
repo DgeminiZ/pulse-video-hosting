@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Manrope", sans-serif;
+  color-scheme: light;
+  background: #f3f7f5;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f3f7f5;
+}
+
+.theme-light {
+  color-scheme: light;
+  --bg: #f3f7f5;
+  --header: rgb(243 247 245 / 94%);
+  --surface: #ffffff;
+  --surface-2: #e8efec;
+  --surface-deep: #f8faf9;
+  --text: #18231f;
+  --muted: #63736d;
+  --subtle: #7b8984;
+  --border: #d5dfdb;
+  --soft: #e7eeeb;
+  --accent: #4f8f7b;
+  --accent-hover: #427a68;
+  --accent-soft: rgb(79 143 123 / 16%);
+  --accent-ink: #ffffff;
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --bg: #0b1411;
+  --header: rgb(11 20 17 / 94%);
+  --surface: #14201b;
+  --surface-2: #192923;
+  --surface-deep: #101c18;
+  --text: #f1f7f4;
+  --muted: #a1b0aa;
+  --subtle: #788c84;
+  --border: #2b3b35;
+  --soft: #1b2b25;
+  --accent: #8acbb4;
+  --accent-hover: #9ed8c4;
+  --accent-soft: rgb(138 203 180 / 14%);
+  --accent-ink: #0b1713;
+}
+
+.theme-shell {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.icon-button {
+  display: grid;
+  height: 40px;
+  width: 40px;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--muted);
+  transition: 160ms ease;
+}
+
+.icon-button:hover {
+  background: var(--soft);
+  color: var(--text);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
